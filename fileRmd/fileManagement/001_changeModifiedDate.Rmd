@@ -1,7 +1,5 @@
 ---
 title: "Change Modified Date"
-author: "sToney"
-date: "2023-05-06"
 output: github_document
 knit: (function(input, ...) {
     rmarkdown::render(

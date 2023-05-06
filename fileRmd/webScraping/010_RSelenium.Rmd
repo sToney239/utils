@@ -1,7 +1,5 @@
 ---
 title: "Web Scrape"
-author: "sToney"
-date: "2023-05-06"
 output: github_document
 knit: (function(input, ...) {
     rmarkdown::render(
@@ -16,7 +14,6 @@ knitr::opts_chunk$set(eval = FALSE)
 ```
 
 ## Preparation
-
 
 ```{cmd}
 # run the code in cmd
@@ -61,7 +58,7 @@ waitForLoad <- function(sleepmin=0.5,sleepmax=1){
 }
 ```
 
-### 
+### get path and download file
 ```{r}
 downloadFile <- function(i) {
   read_html(remDr$getPageSource()[[1]]) %>% 

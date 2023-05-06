@@ -1,0 +1,26 @@
+---
+title: "Attach Packages"
+output: github_document
+knit: (function(input, ...) {
+    rmarkdown::render(
+      input,
+      output_dir = here::here(paste0("fileMd/",basename(getwd())))
+    )
+  })
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+```{r}
+required_Packages_Install <- c("ggplot2", "caret", "leaflet", "plotly", "magick")
+ 
+for(Package in required_Packages_Install){
+  if(!require(Package,character.only = TRUE)) { 
+      install.packages(Package, dependencies=TRUE)
+  }
+  library(Package,character.only = TRUE)
+}
+```
+

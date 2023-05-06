@@ -1,5 +1,5 @@
 ---
-title: "VPN usage"
+title: "set seed"
 output: github_document
 knit: (function(input, ...) {
     rmarkdown::render(
@@ -14,7 +14,12 @@ knitr::opts_chunk$set(eval = FALSE)
 ```
 
 ```{r}
-Sys.setenv(http_proxy='http://127.0.0.1:7890')
-Sys.setenv(https_proxy='http://127.0.0.1:7890')
+withr::with_seed(seed = 123,
+                 h("Bruno"))
+h3 <- function(..., seed){
+  withr::with_seed(seed = seed,
+                   h(...))
+}
 ```
+
 

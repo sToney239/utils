@@ -1,7 +1,5 @@
 Web Scrape
 ================
-sToney
-2023-05-06
 
 ## Preparation
 
@@ -48,7 +46,7 @@ waitForLoad <- function(sleepmin=0.5,sleepmax=1){
 }
 ```
 
-### 
+### get path and download file
 
 ``` r
 downloadFile <- function(i) {
