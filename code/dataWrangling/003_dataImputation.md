@@ -1,6 +1,22 @@
 Data Imputation
 ================
 
+## Data completion
+ - `tidyr::fill()` or `tidyr::complete()`
+
+ - `tidyr::coalesce()` (use the first non-NA value)
+   
+   ```R
+   dplyr::mutate(df, sex_2021_new = coalesce(sex_2021, sex_1920, sex_1819))
+   ```
+   
+ - `dplyr::rows_update()`
+   ```R
+   dplyr::rows_update(df, extra_form, by = "id")
+   ```
+   
+ - `dplyr::replace_na()` or `dplyr::na_if(-999)` (recode -999 to NA)
+
 ## with zero or mean
 
 ``` r

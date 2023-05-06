@@ -56,10 +56,13 @@ Useful Packages
 - [osm history
   data](https://cran.r-project.org/web/packages/ohsome/vignettes/ohsome.html)
 
-## R-package
+## R-package-developing
 
 - [usethis project workflow](https://usethis.r-lib.org/):automates
   repetitive tasks that arise during project setup and development, both
   for R packages and non-package projects.
 - [Rmd write package](https://jacobbien.github.io/litr-project/): write
   a complete R package in a single R markdown document
+- [Profis](https://rstudio.github.io/profvis/): Interactive Visualizations for Profiling R Code speed performance
+- `bench::mark`: compare code speed
+
