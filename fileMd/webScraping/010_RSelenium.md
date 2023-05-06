@@ -1,30 +1,17 @@
----
-title: "Web Scrape"
-author: "sToney"
-date: "2023-05-06"
-output: github_document
-knit: (function(input, ...) {
-    rmarkdown::render(
-      input,
-      output_dir = here::here(paste0("fileMd/",basename(getwd())))
-    )
-  })
----
-
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(eval = FALSE)
-```
+Web Scrape
+================
+sToney
+2023-05-06
 
 ## Preparation
 
-
-```{cmd}
+``` cmd
 # run the code in cmd
 cd C:\Program Files\R_scripts\selenium
 java -jar selenium-server-standalone-4.0.0-alpha-2.jar
 ```
 
-```{r}
+``` r
 library(RSelenium)
 library(rvest)
 library(tidyverse)
@@ -44,11 +31,11 @@ remDr$setWindowSize(1000,1000)
 remDr$navigate("https://cloud.h2os.com/#/album")
 ```
 
-
 ## Specific Use
 
 ### wait for specific element loaded
-```{r}
+
+``` r
 waitForLoad <- function(sleepmin=0.5,sleepmax=1){
   remDr <- get("remDr",envir=globalenv())
   webElemtest <-NULL
@@ -62,7 +49,8 @@ waitForLoad <- function(sleepmin=0.5,sleepmax=1){
 ```
 
 ### 
-```{r}
+
+``` r
 downloadFile <- function(i) {
   read_html(remDr$getPageSource()[[1]]) %>% 
     html_element(".edit a") %>% 
@@ -74,9 +62,9 @@ downloadFile <- function(i) {
 }
 ```
 
-
 ### wrap the whole workflow
-```{r}
+
+``` r
 for (i in 816:827) {
   # click the specific element
   remDr$executeScript("document.querySelector('div.photo-right').click();")
@@ -85,5 +73,3 @@ for (i in 816:827) {
   Sys.sleep(0.5)
 }
 ```
-
-

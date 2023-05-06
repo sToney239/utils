@@ -1,0 +1,22 @@
+---
+title: "Change Modified Date"
+author: "sToney"
+date: "2023-05-06"
+output: github_document
+knit: (function(input, ...) {
+    rmarkdown::render(
+      input,
+      output_dir = here::here(paste0("fileMd/",basename(getwd())))
+    )
+  })
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+```{r}
+# exact_date <- as.POSIXlt("2017-03-11 12:03:42")
+Sys.setFileTime(file_path, exact_date)
+```
+
