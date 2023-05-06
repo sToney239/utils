@@ -1,0 +1,21 @@
+---
+title: "Define Aes Mapping"
+output: github_document
+knit: (function(input, ...) {
+    rmarkdown::render(
+      input,
+      output_dir = here::here(paste0("fileMd/",basename(getwd())))
+    )
+  })
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+```{r}
+my_mapping <- aes(x = foo, y = bar)
+
+aes(colour = qux, !!!my_mapping)
+```
+
