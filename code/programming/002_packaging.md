@@ -2,11 +2,18 @@
 
 ---
 
-## `fusen`
-s
 ```R
-fusen::create_fusen(path = "fusen.quickstart",
-                    template = "minimal")
+#' base_map_plot plot china base region
+# rmarkdown {r function-base_map_plot}
+#'
+#' @param province bool: whether plot province boundary
+#' @importFrom dplyr filter
+#' @importFrom ggplot2 geom_sf
+#' @export
+#' @return A ggplot2 object
+
+base_map_plot <- function(province = FALSE) {
+}
 ```
 
 ## use data/`%>%`
@@ -14,6 +21,13 @@ fusen::create_fusen(path = "fusen.quickstart",
 ```R
 usethis::use_data()
 usethis::use_pipe()
+```
+
+## `fusen`
+
+```R
+fusen::create_fusen(path = "fusen.quickstart",
+                    template = "minimal")
 ```
 
 ## build and install
