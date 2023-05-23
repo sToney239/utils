@@ -37,6 +37,7 @@ Useful Packages
 - [ragg](https://ragg.r-lib.org/): R based on the AGG library developed
   by the late Maxim Shemanarev. AGG provides both higher performance and
   higher quality than the standard raster devices provided by grDevices.
+- [ggbled](https://mjskay.github.io/ggblend/) avoid color overlapping
 
 ## sj-family (from [StrengeJacke](https://github.com/strengejacke?tab=repositories))
 
@@ -53,8 +54,8 @@ Useful Packages
 
 ## spatial
 
-- [osm history
-  data](https://cran.r-project.org/web/packages/ohsome/vignettes/ohsome.html)
+- [osm history data](https://cran.r-project.org/web/packages/ohsome/vignettes/ohsome.html)
+- [weatherindices](https://cran.r-project.org/web/packages/weatherindices/index.html) calculating weather indices influencing crops
 
 ## R-package-developing
 
