@@ -2,6 +2,12 @@
 
 ---
 
+[Making a Simple Package in R, using Modern Tools](https://wazrak.com/making-a-simple-package-in-r-using-modern-tools/)
+
+
+
+
+
 ```R
 #' base_map_plot plot china base region
 # rmarkdown {r function-base_map_plot}
