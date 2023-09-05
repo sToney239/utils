@@ -71,3 +71,24 @@ for (i in 816:827) {
   Sys.sleep(0.5)
 }
 ```
+
+
+
+
+
+
+
+```python
+#Scroll a little bit to load all the elements
+driver.execute_script("window.scrollTo(0, 500);")
+ 
+XPath = "//*[@class='recharts-layer recharts-bar-rectangle']"
+bar = driver.find_elements('xpath',XPath)[-1] #Since I want to get the latest data
+ActionChains(driver).move_to_element(bar).perform()
+
+#Now get the data
+XPATH_TOOLTIP = "//div[@class='PriceHistory--tooltip']"
+data = driver.find_element('xpath',XPATH_TOOLTIP).text
+print(data)
+
+```

@@ -13,3 +13,9 @@ facet_wrap(~ class, scales = "free") +
     colour = "black"
   )
 ```
+
+`ggfun` (if not facetted still usable)
+
+```R
+p + ggfun::facet_set(label=c(`0`="Zero", `1`="One"))
+```

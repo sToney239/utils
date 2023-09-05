@@ -17,3 +17,14 @@ ggplot(df, aes(row, col, fill = value)) +
   coord_equal() + 
   scale_fill_viridis_c(direction =  1)
 ```
+
+
+
+## change all text
+
+```R
+library(ggfun)
+g2 <- set_font(p, 
+              family="Arial", 
+              fontface="italic")
+```
